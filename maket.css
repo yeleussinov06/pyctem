@@ -1,0 +1,73 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Три столбца, центральный занимает больше места */
+    grid-template-rows: auto 1fr auto; /* Три строки, верхняя и нижняя маленькие, центральная занимает всю доступную высоту */
+    grid-gap: 10px; /* Расстояние между элементами */
+    height: 100vh;
+    margin: 0;
+}
+
+.header {
+    grid-column: 1 / -1; /* Занимает центральный столбец */
+    background-color: #34495e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.nav {
+    display: grid;
+    grid-column: 1 / 2; /* Занимает левый столбец */
+    
+    background: #e74c3c;
+    color: #110808;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.nav1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.main {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Три колонки внутри центральной области */
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.feature {
+    background: #f39c12;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar {
+    grid-column: 3 / 4; /* Занимает правый столбец */
+    grid-row: 2 / 3;
+    background: #2ecc71;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    grid-column: 1 / 4; /* Занимает все три столбца */
+    grid-row: 3 / 4; /* Занимает нижнюю строку */
+    background: #34495e;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
